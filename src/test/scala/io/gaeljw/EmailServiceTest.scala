@@ -27,6 +27,8 @@ class EmailServiceTest extends AnyWordSpec with Matchers with BeforeAndAfterEach
         
       val result = emailService.sendEmail()
 
+      result.failed.foreach(println)
+
       result.isSuccess shouldEqual true
 
       // Assertions
